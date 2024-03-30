@@ -12,14 +12,14 @@ interface StorageProps {
 const Storage = ({ totalSize }: StorageProps) => {
   const { subscription, totalStorage, setTotalStorage } = useSubscription();
 
-  const totalValue = subscription === "Basic" ? 15_000_000 : 15_000_000_0;
+  const totalValue = subscription === "Basic" ? 15_000_000_0 : 1_000_000_000;
 
   return (
     <div className="mt-4">
       <div className="flex items-end space-x-1">
         <div className="text-4xl">{byteConverter(totalSize, 1)}</div>
         <div className="opacity-75">
-          of {subscription === "Basic" ? "1.5 GB" : "15 GB"} user
+          of {subscription === "Basic" ? "15 GB" : " 1 TB"} user
         </div>
       </div>
 
